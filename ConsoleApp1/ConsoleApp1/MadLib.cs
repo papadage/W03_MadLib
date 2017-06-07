@@ -3,9 +3,9 @@
 namespace Game
 
 {
-   class WordGame
+   static class MadLib
    {
-      static void Main()
+     public static void Run()
       {
          // Declare variables
          string Creature;
@@ -19,7 +19,6 @@ namespace Game
          string Apparition;
          string Hound;
          string Story;
-
 
          // Get input for variables
          Console.WriteLine("__________________");
@@ -64,6 +63,15 @@ namespace Game
             $"moorland {Farmer}, who all tell the same {Story} of this {Dreadful} {Apparition}, exactly corresponding to " +
             $"the hell-{Hound} of the legend.");
          Console.ReadKey();
+
       }
    }
+      class WordGame
+   {
+      static void Main()
+      {
+         MadLib.Run();              
+      }
+   }
+   
 }

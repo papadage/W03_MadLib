@@ -5,21 +5,33 @@ namespace Game
 {
    static class MadLib
    {
-     public static void Run()
+      // Declare variables
+      static string Creature;
+      static string Luminous;
+      static string Ghastly;
+      static string Spectral;
+      static string Countryman;
+      static string Farrier;
+      static string Farmer;
+      static string Dreadful;
+      static string Apparition;
+      static string Hound;
+      static string Story;
+      public static void Run()
       {
-         // Declare variables
-         string Creature;
-         string Luminous;
-         string Ghastly;
-         string Spectral;
-         string Countryman;
-         string Farrier;
-         string Farmer;
-         string Dreadful;
-         string Apparition;
-         string Hound;
-         string Story;
-
+         Intro();
+         GetWords();
+         Output();
+         End();
+      }
+      static void Intro()
+      {
+         Console.WriteLine("_____________");
+         Console.WriteLine("MadLib!!!");
+         Console.WriteLine("_____________");
+      }
+      public static void GetWords()
+      {
          // Get input for variables
          Console.WriteLine("__________________");
          Console.Write("Please provide a creature type: ");
@@ -55,17 +67,25 @@ namespace Game
          Console.Write("Please provide a type of story: ");
          Story = Console.ReadLine();
          Console.WriteLine("");
-
-         // Outlut the Madlib
-
-         Console.WriteLine($"They all agreed that it was a huge {Creature}, {Luminous}, {Ghastly}, and {Spectral}. " +
+      }
+      static void Output()
+      {  
+       // Outlut the Madlib
+              Console.WriteLine($"They all agreed that it was a huge {Creature}, {Luminous}, {Ghastly}, and {Spectral}. " +
             $"I have cross-examined these men, one of them a hard-headed {Countryman}, one a {Farrier}, and one a " +
             $"moorland {Farmer}, who all tell the same {Story} of this {Dreadful} {Apparition}, exactly corresponding to " +
             $"the hell-{Hound} of the legend.");
-         Console.ReadKey();
-
       }
+
+      static void End()
+      {
+         // Kepp Window open and prompt for exit
+         Console.ReadLine("Press [Enter] to exit.");
+         Console.ReadKey();
+      }
+         
    }
+}
       class WordGame
    {
       static void Main()
